@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Saffron Brew Café</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .gallery-header {
+            background-color: var(--color-coffee-dark);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            height: 350px;
+            /* Taller, more premium feel */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+            /* Slower, smoother zoom */
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, rgba(0, 0, 0, 0.1));
+            display: flex;
+            align-items: flex-end;
+            /* Text at bottom */
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-text {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            width: 100%;
+        }
+
+        .gallery-item:hover .gallery-text {
+            transform: translateY(0);
+        }
+
+        .gallery-text h3 {
+            color: var(--color-saffron);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-text p {
+            color: #eee;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SAFFRON BREW</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="gallery-header">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Visual Journey</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; font-weight: 300; letter-spacing: 1px;">A glimpse into our world of
+            spice and brewing</p>
+    </div>
+
+    <div class="container">
+        <div class="gallery-grid">
+            <!-- Item 1 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/interiors/hero.svg" alt="Warm Ambiance">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Morning Vibe</h3>
+                        <p>Sunlight filtering through our heritage windows.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/coffee/cardamom_latte.svg" alt="Cardamom Latte">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Latte Artistry</h3>
+                        <p>Crafted with patience and precision.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/snacks/truffle_samosa.svg" alt="Gourmet Samosa">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Gourmet Bites</h3>
+                        <p>Our signature Truffle Samosas fresh from the fryer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/snacks/gulab_jamun_cheesecake.svg" alt="Fusion Dessert">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Sweet Fusion</h3>
+                        <p>Where Gulab Jamun meets New York Cheesecake.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/coffee/saffron_chai.svg" alt="Royal Chai">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Royal Brews</h3>
+                        <p>Saffron-infused masala chai for the soul.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gallery-item tilt-card">
+                <img src="images/coffee/espresso_tonic.svg" alt="Iced Coffee">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h3>Summer Coolers</h3>
+                        <p>Refreshing Espresso Tonic with a hint of rose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-coffee-dark); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-saffron); margin-bottom: 1rem;">SAFFRON BREW</h3>
+            <p>Brewing memories, one cup at a time.</p>
+            <div style="margin-top: 2rem;">
+                <p>&copy; 2026 Saffron Brew Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

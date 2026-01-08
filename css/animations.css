@@ -1,0 +1,110 @@
+/* 
+   Saffron Brew Café - Advanced Animation Styles
+   Supports GSAP Engine
+*/
+
+/* Core Defaults */
+.menu-item,
+.hero-content,
+.btn {
+    /* Optimize for GSAP 3D transforms */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* 1. Steam Effect (Coffee) */
+.steam-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    z-index: 5;
+    mix-blend-mode: screen;
+}
+
+/* 2. Glassmorphism Nav (Scrolled State) */
+.navbar.scrolled {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar.scrolled a {
+    color: #3E2723 !important;
+    /* Ensure text remains visible */
+}
+
+/* 3. Magnetic Buttons */
+.btn-primary,
+.nav-links a {
+    position: relative;
+    /* GSAP will control transform */
+    display: inline-block;
+}
+
+/* 4. Chai Glow */
+/* Handled via GSAP boxShadow but we can add a subtle hue */
+[data-type="chai"] .item-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 40px rgba(255, 153, 51, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+[data-type="chai"]:hover .item-image::after {
+    opacity: 1;
+}
+
+/* 5. Cold Brew Liquid Layer */
+[data-type="cold-brew"] .item-image img {
+    /* Scale up slightly to allow parallax movement inside container */
+    width: 110%;
+    margin-left: -5%;
+}
+
+/* 6. Page Loader */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3E2723;
+    /* Coffee Dark */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #FF9933;
+    /* Saffron */
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

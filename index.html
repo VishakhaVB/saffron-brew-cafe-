@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffron Brew Café - Where India Meets Coffee Culture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <meta name="theme-color" content="#3E2723">
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SAFFRON BREW</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Saffron Brew Café</h1>
+            <p>Where India Meets Coffee Culture</p>
+            <a href="menu.html" class="btn btn-primary">Discover Our Menu</a>
+        </div>
+    </header>
+
+    <!-- Featured Section -->
+    <section class="featured" style="padding: 8rem 0; background-color: white;">
+        <div class="container">
+            <h2 class="text-center" style="font-size: 3rem; margin-bottom: 4rem;">Our Signatures</h2>
+            <div class="grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+
+                <!-- Card 1 -->
+                <div class="tilt-card card-3d"
+                    style="background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-soft);">
+                    <div style="height: 300px; overflow: hidden;">
+                        <img src="images/coffee/cappuccino.svg" alt="Masala Cappuccino"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 2rem; text-align: center;">
+                        <h3>Masala Cappuccino</h3>
+                        <p style="margin: 1rem 0; color: #666;">A perfect blend of Italian froth and Indian spices.</p>
+                        <span style="font-weight: bold; color: var(--color-saffron); font-size: 1.2rem;">₹250</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tilt-card card-3d"
+                    style="background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-soft);">
+                    <div style="height: 300px; overflow: hidden;">
+                        <img src="images/snacks/gulab_jamun.svg" alt="Gulab Jamun Cheesecake"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 2rem; text-align: center;">
+                        <h3>Gulab Jamun Cheesecake</h3>
+                        <p style="margin: 1rem 0; color: #666;">West meets East in this divine dessert fusion.</p>
+                        <span style="font-weight: bold; color: var(--color-saffron); font-size: 1.2rem;">₹350</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tilt-card card-3d"
+                    style="background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-soft);">
+                    <div style="height: 300px; overflow: hidden;">
+                        <!-- Placeholder for now until chai image is ready -->
+                        <img src="images/coffee/chai.svg" alt="Kullad Chai"
+                            style="width: 100%; height: 100%; object-fit: cover; background: #eee;">
+                    </div>
+                    <div style="padding: 2rem; text-align: center;">
+                        <h3>Royal Kullad Chai</h3>
+                        <p style="margin: 1rem 0; color: #666;">Authentic saffron-infused tea served in clay cups.</p>
+                        <span style="font-weight: bold; color: var(--color-saffron); font-size: 1.2rem;">₹120</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-coffee-dark); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-saffron); margin-bottom: 1rem;">SAFFRON BREW</h3>
+            <p>Brewing memories, one cup at a time.</p>
+            <div style="margin-top: 2rem;">
+                <p>&copy; 2026 Saffron Brew Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

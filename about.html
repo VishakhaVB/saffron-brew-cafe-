@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Saffron Brew Café</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .about-hero {
+            height: 60vh;
+            background-image: url('images/interiors/hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(62, 39, 35, 0.7);
+        }
+
+        .about-hero h1 {
+            position: relative;
+            z-index: 1;
+            color: var(--color-saffron);
+            font-size: 4rem;
+        }
+
+        .story-section {
+            padding: 6rem 0;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .story-content {
+            flex: 1;
+        }
+
+        .story-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SAFFRON BREW</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <h1>Where India Meets Coffee Culture</h1>
+    </header>
+
+    <section class="container">
+        <div class="story-section">
+            <div class="story-content">
+                <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">The Saffron Brew Story</h2>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #555;">
+                    Founded in 2024, Saffron Brew Café was born from a simple desire: to blend the rich, aromatic
+                    heritage of Indian spices with the modern, sophisticated culture of artisanal coffee.
+                </p>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #555;">
+                    We believe that a café is more than just a place to grab a drink. It's a sanctuary, a meeting
+                    ground, and a place where memories are brewed. Our interiors reflect the warmth of Indian
+                    hospitality, designed with earthy tones and cozy corners perfect for conversations.
+                </p>
+                <p style="font-size: 1.1rem; color: #555;">
+                    From our signature Masala Cappuccino to our fusion Gulab Jamun Cheesecake, every item on our menu is
+                    a testament to our philosophy of innovation rooted in tradition.
+                </p>
+            </div>
+            <div class="story-image tilt-card">
+                <img src="images/interiors/hero.png" alt="Cafe Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-coffee-dark); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-saffron); margin-bottom: 1rem;">SAFFRON BREW</h3>
+            <p>Brewing memories, one cup at a time.</p>
+            <div style="margin-top: 2rem;">
+                <p>&copy; 2026 Saffron Brew Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>
